@@ -23,3 +23,18 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 bot = commands.Bot(command_prefix='!', intents=intents)
+
+
+
+#Insert Commands below here:
+@bot.command()
+async def hello(ctx):
+    """Says hello!"""
+    await ctx.send(f'Hello {ctx.author.mention}! 👋')
+
+@bot.command()
+async def ping(ctx):
+    """Check bot latency"""
+    await ctx.send(f'Pong! 🏓 Latency: {round(bot.latency * 1000)}ms')
+
+bot.run(TOKEN)
