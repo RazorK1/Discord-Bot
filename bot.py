@@ -24,6 +24,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
+conversation_history = {} #Store what's said here
 
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
