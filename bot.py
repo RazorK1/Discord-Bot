@@ -2,9 +2,7 @@
 # dis is a the prototype for the Elms Discord Bot.
 # THIS IS NOT THE FINAL CODE!!!!!!
 
-from email.mime import message
 import os
-from urllib import response
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
